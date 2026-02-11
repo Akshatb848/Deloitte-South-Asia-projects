@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Intelligence Dashboard | Ministry of Education</title>
+    <meta name="description" content="Official Education Intelligence Command Center - Ministry of Education, Government of India">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="govt-emblem"></div>
+                <div class="header-title">
+                    <h1>Education Intelligence Dashboard</h1>
+                    <p>Ministry of Education, Government of India</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="partner-badge">
+                    <span class="partner-label">Technology Partner</span>
+                    <span class="partner-name">Deloitte Touche Tohmatsu</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Calendar Timeline Navigation -->
+    <section class="calendar-timeline">
+        <div class="timeline-container">
+            <button class="timeline-nav-btn prev" id="timelineScrollLeft" aria-label="Scroll left">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="timeline-scroll" id="timelineScroll">
+                <div class="timeline-months" id="timelineMonths">
+                    <!-- Months will be dynamically populated -->
+                </div>
+            </div>
+
+            <button class="timeline-nav-btn next" id="timelineScrollRight" aria-label="Scroll right">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Dashboard Content -->
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Current Period Info -->
+            <div class="period-info">
+                <h2 id="currentPeriod">April 2025</h2>
+                <p class="period-subtitle">Monthly Education Intelligence Report</p>
+            </div>
+
+            <!-- Key Statistics Cards -->
+            <section class="stats-grid" id="statsGrid">
+                <div class="stat-card">
+                    <div class="stat-icon schools"></div>
+                    <div class="stat-content">
+                        <div class="stat-label">Total Schools</div>
+                        <div class="stat-value" data-target="915000">0</div>
+                        <div class="stat-change positive">+0.3% from previous month</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon teachers"></div>
+                    <div class="stat-content">
+                        <div class="stat-label">Registered Teachers</div>
+                        <div class="stat-value" data-target="4231000">0</div>
+                        <div class="stat-change positive">+0.4% from previous month</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon students"></div>
+                    <div class="stat-content">
+                        <div class="stat-label">Enrolled Students</div>
+                        <div class="stat-value" data-target="106700000">0</div>
+                        <div class="stat-change positive">+0.5% from previous month</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon apaar"></div>
+                    <div class="stat-content">
+                        <div class="stat-label">APAAR IDs Issued</div>
+                        <div class="stat-value" data-target="120000000">0</div>
+                        <div class="stat-change positive">+2.1% from previous month</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="chart-row">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Attendance & Teacher Tracking Trends</h3>
+                            <p>Monthly performance indicators</p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="trendsChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>State Performance Comparison</h3>
+                            <p>Top performing states</p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="stateChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Infrastructure Development</h3>
+                            <p>Digital infrastructure deployment</p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="infrastructureChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>APAAR ID Coverage Progress</h3>
+                            <p>Student identification system rollout</p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="apaarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Highlights -->
+            <section class="highlights-section">
+                <h3 class="section-title">Key Highlights</h3>
+                <div class="highlights-grid" id="highlightsGrid">
+                    <!-- Highlights will be dynamically populated -->
+                </div>
+            </section>
+
+            <!-- Events -->
+            <section class="events-section">
+                <h3 class="section-title">Notable Events & Initiatives</h3>
+                <div class="events-grid" id="eventsGrid">
+                    <!-- Events will be dynamically populated -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open Education Intelligence Assistant">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-content">
+                    <h4>Education Intelligence Assistant</h4>
+                    <p>Query newsletter data and insights</p>
+                </div>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Close assistant">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message assistant">
+                    <div class="message-content">
+                        Welcome to the Education Intelligence Assistant. I can help you analyze newsletter data, compare metrics, and provide insights from the Ministry of Education reports.
+                    </div>
+                </div>
+            </div>
+
+            <div class="chatbot-input-container">
+                <input
+                    type="text"
+                    class="chatbot-input"
+                    id="chatbotInput"
+                    placeholder="Ask about education data, trends, or statistics..."
+                    autocomplete="off"
+                />
+                <button class="chatbot-send" id="chatbotSend" aria-label="Send message">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2026 Ministry of Education, Government of India</p>
+                    <p class="footer-subtitle">Education Intelligence Command Center</p>
+                </div>
+                <div class="footer-right">
+                    <p>Powered by AI-Enhanced Analytics</p>
+                    <p class="footer-subtitle">Technology Partner: Deloitte Touche Tohmatsu</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>

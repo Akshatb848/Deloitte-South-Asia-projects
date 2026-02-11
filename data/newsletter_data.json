@@ -1,0 +1,402 @@
+{
+  "April_2025": {
+    "month": "April 2025",
+    "stats": {
+      "schools": 915000,
+      "teachers": 4231000,
+      "students": 106700000,
+      "apaar_ids": 120000000,
+      "attendance_rate": 94.2,
+      "teacher_tracking": 89.5
+    },
+    "highlights": [
+      "Launch of National Education Dashboard 2.0",
+      "APAAR ID coverage reaches 120 million students",
+      "Teacher tracking system expanded to 89.5% coverage",
+      "Digital infrastructure rollout in 5000+ schools"
+    ],
+    "events": [
+      {
+        "title": "National Education Summit 2025",
+        "date": "April 15, 2025",
+        "description": "Annual summit bringing together education stakeholders"
+      },
+      {
+        "title": "Teacher Training Workshop Series",
+        "date": "April 20-22, 2025",
+        "description": "Capacity building for 50,000 teachers nationwide"
+      }
+    ],
+    "state_performance": {
+      "Kerala": {"attendance": 96.8, "apaar_coverage": 98.5},
+      "Gujarat": {"attendance": 95.2, "apaar_coverage": 97.1},
+      "Tamil Nadu": {"attendance": 94.9, "apaar_coverage": 96.8},
+      "Karnataka": {"attendance": 93.5, "apaar_coverage": 95.2}
+    },
+    "infrastructure": {
+      "smart_classrooms": 45000,
+      "computer_labs": 125000,
+      "internet_enabled": 180000
+    }
+  },
+  "May_2025": {
+    "month": "May 2025",
+    "stats": {
+      "schools": 918000,
+      "teachers": 4245000,
+      "students": 107200000,
+      "apaar_ids": 122500000,
+      "attendance_rate": 93.8,
+      "teacher_tracking": 91.2
+    },
+    "highlights": [
+      "Summer skill development programs launched in 15 states",
+      "APAAR ID integration with scholarship systems",
+      "Teacher training modules updated with AI pedagogy",
+      "Rural-urban gap reduced by 3.2 percentage points"
+    ],
+    "events": [
+      {
+        "title": "Digital Literacy Campaign",
+        "date": "May 5-31, 2025",
+        "description": "Month-long campaign for digital skills"
+      },
+      {
+        "title": "STEM Excellence Awards",
+        "date": "May 18, 2025",
+        "description": "Recognition of outstanding STEM educators"
+      }
+    ],
+    "state_performance": {
+      "Kerala": {"attendance": 96.5, "apaar_coverage": 99.1},
+      "Gujarat": {"attendance": 95.8, "apaar_coverage": 97.8},
+      "Tamil Nadu": {"attendance": 95.2, "apaar_coverage": 97.5},
+      "Karnataka": {"attendance": 94.1, "apaar_coverage": 96.0}
+    },
+    "infrastructure": {
+      "smart_classrooms": 47500,
+      "computer_labs": 128000,
+      "internet_enabled": 185000
+    }
+  },
+  "June_2025": {
+    "month": "June 2025",
+    "stats": {
+      "schools": 920000,
+      "teachers": 4258000,
+      "students": 107800000,
+      "apaar_ids": 125000000,
+      "attendance_rate": 95.1,
+      "teacher_tracking": 92.8
+    },
+    "highlights": [
+      "New academic year begins with record enrollment",
+      "Dropout prevention program shows 15% improvement",
+      "Teacher-student ratio improved to 1:24",
+      "Mid-day meal program enhanced with nutrition tracking"
+    ],
+    "events": [
+      {
+        "title": "Academic Year Inauguration",
+        "date": "June 1, 2025",
+        "description": "Nationwide academic year opening ceremony"
+      },
+      {
+        "title": "Parent-Teacher Digital Connect",
+        "date": "June 10-30, 2025",
+        "description": "Digital platform for parent engagement"
+      }
+    ],
+    "state_performance": {
+      "Kerala": {"attendance": 97.2, "apaar_coverage": 99.5},
+      "Gujarat": {"attendance": 96.1, "apaar_coverage": 98.2},
+      "Tamil Nadu": {"attendance": 95.8, "apaar_coverage": 98.0},
+      "Karnataka": {"attendance": 94.8, "apaar_coverage": 96.8}
+    },
+    "infrastructure": {
+      "smart_classrooms": 50000,
+      "computer_labs": 131000,
+      "internet_enabled": 190000
+    }
+  },
+  "July_2025": {
+    "month": "July 2025",
+    "stats": {
+      "schools": 922000,
+      "teachers": 4270000,
+      "students": 108500000,
+      "apaar_ids": 128000000,
+      "attendance_rate": 94.7,
+      "teacher_tracking": 93.5
+    },
+    "highlights": [
+      "Monsoon preparedness: 98% schools equipped with contingency plans",
+      "Digital learning modules accessed by 85 million students",
+      "Teacher welfare scheme expanded to cover 95% of educators",
+      "Special education inclusion programs in 10,000 schools"
+    ],
+    "events": [
+      {
+        "title": "Monsoon Learning Continuity Plan",
+        "date": "July 1-31, 2025",
+        "description": "Ensuring uninterrupted education during monsoon"
+      },
+      {
+        "title": "Inclusive Education Workshop",
+        "date": "July 15-17, 2025",
+        "description": "Training for special needs education"
+      }
+    ],
+    "state_performance": {
+      "Kerala": {"attendance": 96.8, "apaar_coverage": 99.7},
+      "Gujarat": {"attendance": 95.5, "apaar_coverage": 98.5},
+      "Tamil Nadu": {"attendance": 95.3, "apaar_coverage": 98.3},
+      "Karnataka": {"attendance": 94.2, "apaar_coverage": 97.2}
+    },
+    "infrastructure": {
+      "smart_classrooms": 52500,
+      "computer_labs": 134000,
+      "internet_enabled": 195000
+    }
+  },
+  "August_2025": {
+    "month": "August 2025",
+    "stats": {
+      "schools": 924000,
+      "teachers": 4282000,
+      "students": 109200000,
+      "apaar_ids": 131000000,
+      "attendance_rate": 95.3,
+      "teacher_tracking": 94.2
+    },
+    "highlights": [
+      "Independence Day special: Educational infrastructure in border areas",
+      "Scholarship disbursal to 2.5 million students",
+      "AI-powered learning analytics piloted in 1000 schools",
+      "Teacher performance dashboard launched nationwide"
+    ],
+    "events": [
+      {
+        "title": "National Education Awards",
+        "date": "August 15, 2025",
+        "description": "Recognition of excellence in education"
+      },
+      {
+        "title": "EdTech Innovation Expo",
+        "date": "August 20-22, 2025",
+        "description": "Showcase of educational technology solutions"
+      }
+    ],
+    "state_performance": {
+      "Kerala": {"attendance": 97.5, "apaar_coverage": 99.8},
+      "Gujarat": {"attendance": 96.8, "apaar_coverage": 98.9},
+      "Tamil Nadu": {"attendance": 96.2, "apaar_coverage": 98.6},
+      "Karnataka": {"attendance": 95.3, "apaar_coverage": 97.8}
+    },
+    "infrastructure": {
+      "smart_classrooms": 55000,
+      "computer_labs": 137000,
+      "internet_enabled": 200000
+    }
+  },
+  "September_2025": {
+    "month": "September 2025",
+    "stats": {
+      "schools": 926000,
+      "teachers": 4295000,
+      "students": 110000000,
+      "apaar_ids": 134000000,
+      "attendance_rate": 95.8,
+      "teacher_tracking": 95.0
+    },
+    "highlights": [
+      "Mid-term assessment shows 12% improvement in learning outcomes",
+      "Vocational training integrated in 5,000 secondary schools",
+      "Library digitization project covers 25,000 schools",
+      "Mental health support program for students expanded"
+    ],
+    "events": [
+      {
+        "title": "Teachers' Day Celebration",
+        "date": "September 5, 2025",
+        "description": "Honoring educators nationwide"
+      },
+      {
+        "title": "Career Guidance Fair",
+        "date": "September 15-20, 2025",
+        "description": "Student career counseling and guidance"
+      }
+    ],
+    "state_performance": {
+      "Kerala": {"attendance": 97.8, "apaar_coverage": 99.9},
+      "Gujarat": {"attendance": 97.1, "apaar_coverage": 99.2},
+      "Tamil Nadu": {"attendance": 96.6, "apaar_coverage": 98.9},
+      "Karnataka": {"attendance": 95.8, "apaar_coverage": 98.2}
+    },
+    "infrastructure": {
+      "smart_classrooms": 57500,
+      "computer_labs": 140000,
+      "internet_enabled": 205000
+    }
+  },
+  "October_2025": {
+    "month": "October 2025",
+    "stats": {
+      "schools": 928000,
+      "teachers": 4308000,
+      "students": 110800000,
+      "apaar_ids": 137000000,
+      "attendance_rate": 94.9,
+      "teacher_tracking": 95.6
+    },
+    "highlights": [
+      "Festival season: Cultural education programs in all schools",
+      "STEM labs established in 3,000 government schools",
+      "Reading literacy campaign reaches 50 million students",
+      "Green schools initiative: 10,000 schools certified"
+    ],
+    "events": [
+      {
+        "title": "National Science Exhibition",
+        "date": "October 10-15, 2025",
+        "description": "Student science projects showcase"
+      },
+      {
+        "title": "Swachh Vidyalaya Abhiyan",
+        "date": "October 2-31, 2025",
+        "description": "School cleanliness and hygiene campaign"
+      }
+    ],
+    "state_performance": {
+      "Kerala": {"attendance": 97.3, "apaar_coverage": 99.9},
+      "Gujarat": {"attendance": 96.5, "apaar_coverage": 99.4},
+      "Tamil Nadu": {"attendance": 96.0, "apaar_coverage": 99.1},
+      "Karnataka": {"attendance": 95.2, "apaar_coverage": 98.5}
+    },
+    "infrastructure": {
+      "smart_classrooms": 60000,
+      "computer_labs": 143000,
+      "internet_enabled": 210000
+    }
+  },
+  "November_2025": {
+    "month": "November 2025",
+    "stats": {
+      "schools": 930000,
+      "teachers": 4320000,
+      "students": 111500000,
+      "apaar_ids": 140000000,
+      "attendance_rate": 95.5,
+      "teacher_tracking": 96.2
+    },
+    "highlights": [
+      "Annual learning assessment conducted for 100 million students",
+      "Teacher continuous professional development: 90% participation",
+      "Sports infrastructure upgrade in 8,000 schools",
+      "Parent engagement increased by 25% through digital platforms"
+    ],
+    "events": [
+      {
+        "title": "National Education Conference",
+        "date": "November 5-7, 2025",
+        "description": "Policy makers and educators symposium"
+      },
+      {
+        "title": "Children's Day Celebrations",
+        "date": "November 14, 2025",
+        "description": "Student-centric events nationwide"
+      }
+    ],
+    "state_performance": {
+      "Kerala": {"attendance": 97.9, "apaar_coverage": 100.0},
+      "Gujarat": {"attendance": 97.2, "apaar_coverage": 99.6},
+      "Tamil Nadu": {"attendance": 96.8, "apaar_coverage": 99.4},
+      "Karnataka": {"attendance": 96.0, "apaar_coverage": 98.9}
+    },
+    "infrastructure": {
+      "smart_classrooms": 62500,
+      "computer_labs": 146000,
+      "internet_enabled": 215000
+    }
+  },
+  "December_2025": {
+    "month": "December 2025",
+    "stats": {
+      "schools": 932000,
+      "teachers": 4333000,
+      "students": 112200000,
+      "apaar_ids": 143000000,
+      "attendance_rate": 94.2,
+      "teacher_tracking": 96.8
+    },
+    "highlights": [
+      "Year-end assessments: Learning outcomes improved by 18%",
+      "Winter preparedness in hilly regions: 5,000 schools equipped",
+      "Digital content library expanded to 500,000 resources",
+      "Teacher excellence awards for 10,000 educators"
+    ],
+    "events": [
+      {
+        "title": "Annual Sports Meet",
+        "date": "December 10-20, 2025",
+        "description": "Inter-school sports competitions"
+      },
+      {
+        "title": "Year-End Review Conference",
+        "date": "December 15, 2025",
+        "description": "Annual education sector review"
+      }
+    ],
+    "state_performance": {
+      "Kerala": {"attendance": 97.5, "apaar_coverage": 100.0},
+      "Gujarat": {"attendance": 96.8, "apaar_coverage": 99.8},
+      "Tamil Nadu": {"attendance": 96.3, "apaar_coverage": 99.6},
+      "Karnataka": {"attendance": 95.5, "apaar_coverage": 99.2}
+    },
+    "infrastructure": {
+      "smart_classrooms": 65000,
+      "computer_labs": 149000,
+      "internet_enabled": 220000
+    }
+  },
+  "January_2026": {
+    "month": "January 2026",
+    "stats": {
+      "schools": 935000,
+      "teachers": 4345000,
+      "students": 113000000,
+      "apaar_ids": 146000000,
+      "attendance_rate": 95.9,
+      "teacher_tracking": 97.5
+    },
+    "highlights": [
+      "Republic Day special: Educational equity achieved in 28 states",
+      "Teacher tracking system reaches 97.5% nationwide coverage",
+      "Student performance analytics dashboard operational",
+      "Infrastructure gaps reduced to less than 5% nationally"
+    ],
+    "events": [
+      {
+        "title": "Republic Day Educational Excellence Program",
+        "date": "January 26, 2026",
+        "description": "Celebration of educational achievements"
+      },
+      {
+        "title": "New Semester Preparation Workshop",
+        "date": "January 20-25, 2026",
+        "description": "Teacher training for upcoming semester"
+      }
+    ],
+    "state_performance": {
+      "Kerala": {"attendance": 98.2, "apaar_coverage": 100.0},
+      "Gujarat": {"attendance": 97.5, "apaar_coverage": 99.9},
+      "Tamil Nadu": {"attendance": 97.1, "apaar_coverage": 99.8},
+      "Karnataka": {"attendance": 96.5, "apaar_coverage": 99.5}
+    },
+    "infrastructure": {
+      "smart_classrooms": 68000,
+      "computer_labs": 152000,
+      "internet_enabled": 225000
+    }
+  }
+}
