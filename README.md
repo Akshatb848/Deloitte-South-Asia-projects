@@ -125,10 +125,15 @@ The Education Intelligence Dashboard is an AI-powered, government-grade analytic
 
 ### Backend Setup
 
+**Requirements**: Python 3.10.11 (or Python 3.10.x)
+
 1. **Create virtual environment**
    ```bash
-   python -m venv venv
+   python3.10 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+   # Verify Python version
+   python --version  # Should show Python 3.10.x
    ```
 
 2. **Install dependencies**

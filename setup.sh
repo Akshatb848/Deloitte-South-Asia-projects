@@ -21,6 +21,18 @@ NC='\033[0m' # No Color
 # Check prerequisites
 echo "Checking prerequisites..."
 
+# Check Python version
+if command -v python3.10 &> /dev/null; then
+    PYTHON_VERSION=$(python3.10 --version 2>&1 | awk '{print $2}')
+    echo -e "${GREEN}✓ Python ${PYTHON_VERSION} found${NC}"
+    if [[ "$PYTHON_VERSION" == "3.10."* ]]; then
+        echo -e "${GREEN}✓ Python 3.10.x detected (compatible)${NC}"
+    fi
+else
+    echo -e "${YELLOW}⚠ Python 3.10 not found in PATH${NC}"
+    echo "  For manual setup, install Python 3.10.11"
+fi
+
 # Check Docker
 if ! command -v docker &> /dev/null; then
     echo -e "${RED}✗ Docker not found${NC}"

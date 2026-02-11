@@ -2,7 +2,7 @@
 # Ministry of Education, Government of India
 # Technology Partner: Deloitte Touche Tohmatsu
 
-FROM python:3.11-slim
+FROM python:3.10.11-slim
 
 # Set working directory
 WORKDIR /app
