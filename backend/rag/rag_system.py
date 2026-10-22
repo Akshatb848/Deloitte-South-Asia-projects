@@ -5,7 +5,6 @@ Handles vector embeddings, storage, and semantic search
 
 import os
 import json
-import numpy as np
 import faiss
 from typing import List, Dict, Any, Optional
 from pathlib import Path

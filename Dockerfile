@@ -2,7 +2,7 @@
 # Ministry of Education, Government of India
 # Technology Partner: Deloitte Touche Tohmatsu
 
-FROM python:3.10.11-slim
+FROM python:3.11-slim
 
 # Set working directory
 WORKDIR /app
@@ -16,8 +16,9 @@ RUN apt-get update && apt-get install -y \
 # Copy requirements
 COPY requirements.txt .
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install Python dependencies (CPU-only PyTorch keeps the image small)
+RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu \
+    && pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY backend/ ./backend/

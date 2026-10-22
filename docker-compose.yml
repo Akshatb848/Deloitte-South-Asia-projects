@@ -43,6 +43,8 @@ services:
       - "8080:80"
     volumes:
       - ./frontend:/usr/share/nginx/html:ro
+      # app.js loads ../data/newsletter_data.json, i.e. /data/ relative to the site root
+      - ./data:/usr/share/nginx/html/data:ro
       - ./config/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     depends_on:
       - backend

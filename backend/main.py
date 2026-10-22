@@ -5,6 +5,7 @@ Technology Partner: Deloitte Touche Tohmatsu
 """
 
 import os
+import sys
 import json
 from typing import Optional, Dict, Any, List
 from datetime import datetime
@@ -18,9 +19,13 @@ from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from dotenv import load_dotenv
 
-from api.chat_handler import ChatHandler
-from rag.rag_system import RAGSystem
-from llm.llm_handler import LLMHandler
+# Allow both `python backend/main.py` / `cd backend && uvicorn main:app`
+# and `uvicorn backend.main:app` from the repository root.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from api.chat_handler import ChatHandler  # noqa: E402
+from rag.rag_system import RAGSystem  # noqa: E402
+from llm.llm_handler import LLMHandler  # noqa: E402
 
 # Load environment variables
 load_dotenv()
@@ -65,6 +70,7 @@ class ChatResponse(BaseModel):
     response: str
     sources: Optional[List[Dict[str, Any]]] = None
     visualization: Optional[Dict[str, Any]] = None
+    mode: Optional[str] = None  # "llm" or "retrieval_only"
     timestamp: str
 
 class CompareRequest(BaseModel):
@@ -127,6 +133,7 @@ async def chat(request: Request, chat_request: ChatRequest):
             response=response_data["response"],
             sources=response_data.get("sources"),
             visualization=response_data.get("visualization"),
+            mode=response_data.get("mode"),
             timestamp=datetime.utcnow().isoformat()
         )
 

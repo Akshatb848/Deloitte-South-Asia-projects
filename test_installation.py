@@ -1,26 +1,25 @@
 #!/usr/bin/env python3
 """
 Installation Test Script
-Verifies all dependencies are correctly installed for Python 3.10.11
+Verifies all dependencies are correctly installed (Python 3.10+)
 """
 
 import sys
 import importlib.metadata
 
 def check_python_version():
-    """Check Python version"""
+    """Check Python version (3.10 or newer is supported)"""
     version = sys.version_info
-    expected = (3, 10, 11)
+    minimum = (3, 10)
 
-    print(f"Checking Python version...")
+    print("Checking Python version...")
     print(f"  Current: {version.major}.{version.minor}.{version.micro}")
 
-    if version.major == 3 and version.minor == 10:
-        print("  ✓ Python 3.10.x detected")
+    if (version.major, version.minor) >= minimum:
+        print("  ✓ Python 3.10+ detected")
         return True
-    else:
-        print(f"  ⚠ Expected Python 3.10.11, got {version.major}.{version.minor}.{version.micro}")
-        return False
+    print(f"  ⚠ Python 3.10+ required, got {version.major}.{version.minor}.{version.micro}")
+    return False
 
 def check_package(package_name, expected_version=None):
     """Check if a package is installed"""
@@ -66,7 +65,7 @@ def test_sentence_transformers():
     """Test sentence transformers functionality"""
     print("\nTesting Sentence Transformers...")
     try:
-        from sentence_transformers import SentenceTransformer
+        from sentence_transformers import SentenceTransformer  # noqa: F401
 
         print("  ✓ Sentence Transformers import successful")
         print("  Note: First run will download model (~400MB)")
@@ -126,16 +125,15 @@ def main():
     # Check packages
     print("Checking installed packages...")
     packages = [
-        ("fastapi", "0.104"),
-        ("pydantic", "2.4"),
-        ("numpy", "1.24"),
-        ("pandas", "2.0"),
-        ("sentence-transformers", "2.2"),
-        ("faiss-cpu", "1.7"),
-        ("httpx", "0.25"),
-        ("uvicorn", "0.24"),
-        ("langchain", "0.0"),
-        ("ollama", "0.1"),
+        ("fastapi", None),
+        ("pydantic", None),
+        ("numpy", None),
+        ("sentence-transformers", None),
+        ("faiss-cpu", None),
+        ("httpx", None),
+        ("uvicorn", None),
+        ("slowapi", None),
+        ("python-dotenv", None),
     ]
 
     package_results = []
@@ -183,7 +181,7 @@ def main():
         print("✗ Some tests failed. Please check the errors above.")
         print()
         print("Troubleshooting:")
-        print("  1. Ensure Python 3.10.11 is installed")
+        print("  1. Ensure Python 3.10+ is installed")
         print("  2. Run: pip install -r requirements.txt")
         print("  3. Check docs/PYTHON_COMPATIBILITY.md")
         return 1
