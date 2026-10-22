@@ -1,0 +1,39 @@
+# Temporary workflow: captures README screenshots on a CI runner (which can
+# download the embedding model) and commits them back to this temp branch.
+name: capture-screenshots
+on:
+  push:
+    branches: [readiness/screenshots-tmp]
+permissions:
+  contents: write
+jobs:
+  shots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt playwright
+          python -m playwright install --with-deps chromium
+      - name: Start backend (no Ollama -> retrieval-only) and static server
+        run: |
+          CORS_ORIGINS='["http://localhost:8080"]' nohup uvicorn backend.main:app --port 8000 > backend.log 2>&1 &
+          nohup python -m http.server 8080 > static.log 2>&1 &
+          for i in $(seq 1 60); do curl -fsS http://localhost:8000/api/health && break; sleep 3; done
+          echo; curl -s http://localhost:8000/api/health
+      - name: Capture
+        run: python scripts/capture_screenshots.py http://localhost:8080/frontend/index.html docs/screenshots
+      - name: Show backend log
+        if: always()
+        run: tail -50 backend.log
+      - name: Commit screenshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/screenshots
+          git commit -m "Add CI-captured screenshots [skip ci]"
+          git push
