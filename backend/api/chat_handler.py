@@ -2,7 +2,6 @@
 Chat Handler - Orchestrates LLM and RAG for conversational interface
 """
 
-import re
 from typing import Dict, Any, List, Optional
 
 
@@ -83,16 +82,23 @@ class ChatHandler:
         # Format context
         context = self._format_context(search_results)
 
-        # Generate response
-        response_text = await self.llm_handler.generate_response(
-            query=query,
-            context=context,
-            temperature=0.3
-        )
+        # Generate response with the LLM when it is reachable; otherwise fall
+        # back to returning the retrieved newsletter excerpts verbatim.
+        if await self.llm_handler.check_connection():
+            response_text = await self.llm_handler.generate_response(
+                query=query,
+                context=context,
+                temperature=0.3
+            )
+            mode = "llm"
+        else:
+            response_text = self._retrieval_only_response(search_results)
+            mode = "retrieval_only"
 
         # Prepare response data
         response_data = {
             "response": response_text,
+            "mode": mode,
             "sources": [
                 {
                     "month": result['metadata']['month_name'],
@@ -200,7 +206,6 @@ class ChatHandler:
 
         # Add analysis
         if len(comparison_data) >= 2:
-            states_list = list(comparison_data.keys())
             best_attendance = max(comparison_data.items(), key=lambda x: x[1]['attendance'])
             best_apaar = max(comparison_data.items(), key=lambda x: x[1]['apaar_coverage'])
 
@@ -287,6 +292,19 @@ class ChatHandler:
             "entities": entities,
             "metric": metric
         }
+
+    def _retrieval_only_response(self, search_results: List[Dict[str, Any]]) -> str:
+        """Answer without an LLM: return the top retrieved excerpts as-is."""
+        if not search_results:
+            return "The requested information is not available in the current reporting period."
+
+        parts = ["LLM is not connected, so here are the most relevant newsletter excerpts (retrieval only):"]
+        for result in search_results:
+            text = "\n".join(line.strip() for line in result['text'].splitlines() if line.strip())
+            parts.append(
+                f"\n[{result['metadata']['month_name']} · {result['type'].replace('_', ' ')}]\n{text}"
+            )
+        return "\n".join(parts)
 
     def _format_context(self, search_results: List[Dict[str, Any]]) -> str:
         """Format search results into context for LLM"""

@@ -494,7 +494,11 @@ function addMessage(content, type) {
     const messagesContainer = document.getElementById('chatbotMessages');
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${type}`;
-    messageDiv.innerHTML = `<div class="message-content">${content}</div>`;
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'message-content';
+    // Render as text (not HTML) so user input and model output cannot inject markup.
+    contentDiv.textContent = content;
+    messageDiv.appendChild(contentDiv);
     messagesContainer.appendChild(messageDiv);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }

@@ -1,65 +1,19 @@
 # =================================
-# FastAPI Backend
+# Runtime dependencies
+# (only packages imported by backend/; tested on Python 3.10–3.12)
 # =================================
 
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
-python-dotenv==1.0.0
-pydantic==2.4.2
-pydantic-settings==2.0.3
-python-multipart==0.0.6
+# API
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+pydantic>=2.4.2
+python-dotenv>=1.0.0
+slowapi>=0.1.9
+httpx>=0.25.2
 
-# =================================
-# LLM & AI Stack
-# =================================
-
-langchain==0.0.340
-langchain-community==0.0.1
-langchain-core==0.0.13
-ollama==0.1.6
-
-sentence-transformers==2.2.2
-transformers==4.35.2
-torch==2.1.2
-tokenizers==0.15.0
-huggingface-hub==0.13.4
-
-# =================================
-# Vector Database
-# =================================
-
-faiss-cpu==1.7.4
-chromadb==0.4.15
-
-# =================================
-# Data Processing
-# =================================
-
-numpy==1.24.4
-pandas==2.0.3
-
-# =================================
-# HTTP & Security
-# =================================
-
-httpx==0.25.2
-python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
-slowapi==0.1.9
-cryptography==41.0.7
-
-# =================================
-# Utilities
-# =================================
-
-aiofiles==23.2.1
-python-json-logger==2.0.7
-typing-extensions==4.8.0
-anyio==3.7.1
-annotated-types==0.6.0
-
-# =================================
-# Compatibility Lock
-# =================================
-
-protobuf==4.25.3
+# Retrieval (embeddings + vector search)
+numpy>=1.24.4,<3
+faiss-cpu>=1.7.4
+# Pulls in PyTorch. For a CPU-only install, first run:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+sentence-transformers>=2.3.0

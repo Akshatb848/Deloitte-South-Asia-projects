@@ -5,7 +5,7 @@ Manages communication with local LLM (Mistral/Llama)
 
 import os
 import httpx
-from typing import Dict, Any, Optional, List
+from typing import Dict, Any
 
 class LLMHandler:
     """Handler for LLM operations using Ollama"""
