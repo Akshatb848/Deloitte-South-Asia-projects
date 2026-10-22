@@ -1,14 +1,13 @@
 #!/bin/bash
 
 # Education Intelligence Dashboard - Setup Script
-# Ministry of Education, Government of India
-# Technology Partner: Deloitte Touche Tohmatsu
+# Portfolio demonstration built on sample data (MIT licence)
 
 set -e
 
 echo "======================================================================="
 echo "Education Intelligence Dashboard - Setup"
-echo "Ministry of Education, Government of India"
+echo "Portfolio demo · sample data"
 echo "======================================================================="
 echo ""
 

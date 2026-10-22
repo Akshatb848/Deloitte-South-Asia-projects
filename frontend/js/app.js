@@ -1,7 +1,6 @@
 /**
  * Education Intelligence Dashboard
- * Ministry of Education, Government of India
- * Technology Partner: Deloitte Touche Tohmatsu
+ * Portfolio demonstration built on sample data (MIT licence)
  */
 
 // =============================================================================

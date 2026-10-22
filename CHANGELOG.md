@@ -159,7 +159,6 @@ None - All API endpoints and functionality remain the same
 For issues or questions:
 - Check: `docs/PYTHON_COMPATIBILITY.md`
 - Check: `docs/DEPLOYMENT.md`
-- Email: education-dashboard@deloitte.com
 - GitHub: Create an issue with version info
 
 ---

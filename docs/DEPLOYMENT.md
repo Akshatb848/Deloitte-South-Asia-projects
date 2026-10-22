@@ -1,7 +1,7 @@
 # Deployment Guide
 
 ## Education Intelligence Dashboard
-**Ministry of Education, Government of India**
+**Portfolio demonstration (sample data)**
 
 ---
 
@@ -514,9 +514,7 @@ docker service scale education-dashboard_backend=3
 
 ## Contact
 
-**Deployment Support**: devops@deloitte.com
-**Technical Issues**: education-dashboard@deloitte.com
-**Emergency Hotline**: +91-XXXX-XXXXXX
+Open a GitHub issue on this repository for deployment questions.
 
 ---
 
