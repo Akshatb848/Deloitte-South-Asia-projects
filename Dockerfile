@@ -1,6 +1,5 @@
 # Education Intelligence Dashboard - Backend
-# Ministry of Education, Government of India
-# Technology Partner: Deloitte Touche Tohmatsu
+# Portfolio demonstration built on sample data (MIT licence)
 
 FROM python:3.11-slim
 

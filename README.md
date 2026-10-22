@@ -1,9 +1,9 @@
-# Education Intelligence Dashboard (MoE newsletter command center)
+# Education Intelligence Dashboard
 
-> Turns monthly Ministry of Education newsletter data into an interactive dashboard with FAISS semantic search and a local-LLM (Ollama) chatbot that falls back to plain retrieval when no LLM is running.
+> Turns monthly education newsletter data (bundled sample) into an interactive dashboard with FAISS semantic search and a local-LLM (Ollama) chatbot that falls back to plain retrieval when no LLM is running.
 
 [![CI](https://github.com/Akshatb848/Deloitte-South-Asia-projects/actions/workflows/ci.yml/badge.svg)](https://github.com/Akshatb848/Deloitte-South-Asia-projects/actions/workflows/ci.yml)
-[![License](https://img.shields.io/badge/license-all%20rights%20reserved-lightgrey.svg)](#license)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-backend-009688.svg)](https://fastapi.tiangolo.com/)
 
@@ -11,9 +11,9 @@
 
 ![Chatbot in retrieval-only mode answering from the newsletter data](docs/screenshots/chat-retrieval-only.png)
 
-<sub>Screenshots captured headlessly with Playwright (<code>scripts/capture_screenshots.py</code>) on a CI runner with the real <code>all-MiniLM-L6-v2</code> embedding model and <b>no LLM running</b>, so the chatbot shows its retrieval-only fallback. All figures come from the sample dataset in <code>data/newsletter_data.json</code>.</sub>
+<sub>Screenshots captured headlessly with Playwright (<code>scripts/capture_screenshots.py</code>) with <b>no LLM running</b>, so the chatbot shows its retrieval-only fallback. All figures come from the sample dataset in <code>data/newsletter_data.json</code>.</sub>
 
-Built with Deloitte (South Asia) as an Education Intelligence Dashboard for India's Ministry of Education.
+> **Portfolio demonstration.** This is an independent, runnable rebuild by Akshat Banga of a dashboard concept from his consulting work, published so reviewers can run it end to end. It uses bundled **sample data**, contains no client data or code, and is not an official product of the Government of India, the Ministry of Education or Deloitte. Names are used only to describe the context of the original work.
 
 ---
 
@@ -150,10 +150,7 @@ docs/                     API, deployment and Python-compatibility notes
 
 ## License
 
-No open-source license is granted. The original project README states:
-
-> Copyright © 2026 Ministry of Education, Government of India. All rights reserved.
-> This software is proprietary and confidential. Unauthorized copying, distribution, or use is strictly prohibited.
+[MIT](LICENSE) © 2026 Akshat Banga. The bundled dataset is illustrative sample data for demonstration only.
 
 ## Author
 

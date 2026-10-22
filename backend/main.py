@@ -1,7 +1,6 @@
 """
 Education Intelligence Dashboard - Backend API
-Ministry of Education, Government of India
-Technology Partner: Deloitte Touche Tohmatsu
+Portfolio demonstration built on sample data (MIT licence, Akshat Banga)
 """
 
 import os
@@ -33,7 +32,7 @@ load_dotenv()
 # Initialize FastAPI app
 app = FastAPI(
     title="Education Intelligence Dashboard API",
-    description="AI-powered backend for Ministry of Education Intelligence Dashboard",
+    description="AI-powered backend for the Education Intelligence Dashboard (portfolio demo, sample data)",
     version="1.0.0"
 )
 
@@ -207,7 +206,7 @@ async def startup_event():
     """Initialize components on startup"""
     print("=" * 70)
     print("Education Intelligence Dashboard - Backend API")
-    print("Ministry of Education, Government of India")
+    print("Portfolio demo · sample data")
     print("=" * 70)
 
     # Initialize RAG system

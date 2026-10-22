@@ -1,12 +1,11 @@
 /* =============================================================================
    Education Intelligence Dashboard - Government Grade Styling
-   Ministry of Education, Government of India
-   Technology Partner: Deloitte Touche Tohmatsu
+   Portfolio demonstration built on sample data (MIT licence)
    ============================================================================= */
 
 /* CSS Variables - Government Color Palette */
 :root {
-    /* Primary Colors - Ministry Blue */
+    /* Primary Colors - Navy Blue */
     --color-primary: #003d82;
     --color-primary-dark: #002952;
     --color-primary-light: #0052ad;

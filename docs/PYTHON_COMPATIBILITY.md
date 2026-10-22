@@ -302,7 +302,6 @@ When upgrading to Python 3.11+:
 
 For dependency issues:
 - Check: docs/TROUBLESHOOTING.md
-- Email: education-dashboard@deloitte.com
 - GitHub Issues: Include `pip freeze` output
 
 ---

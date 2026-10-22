@@ -16,12 +16,12 @@ class LLMHandler:
         self.system_prompt = self._load_system_prompt()
 
     def _load_system_prompt(self) -> str:
-        """Load the official system prompt for the Education Intelligence Assistant"""
-        return """You are an official Education Intelligence Assistant for the Ministry of Education, Government of India.
+        """Load the system prompt for the Education Intelligence Assistant"""
+        return """You are an Education Intelligence Assistant answering questions about a sample education newsletter dataset.
 
 Your role and responsibilities:
 1. Answer strictly based on the Vidya Samiksha Kendra newsletter data provided in the context
-2. Maintain a formal, policy-aligned tone suitable for government officials
+2. Maintain a formal, policy-aligned tone suitable for education policy readers
 3. Provide accurate, data-driven insights without speculation
 4. Cite specific statistics and time periods when relevant
 5. If information is not found in the provided context, respond: "The requested information is not available in the current reporting period."
@@ -103,7 +103,7 @@ Format your responses clearly with:
 
     def _build_prompt(self, query: str, context: str) -> str:
         """Build the complete prompt with context and query"""
-        return f"""Based on the following education data from the Ministry of Education newsletter:
+        return f"""Based on the following education data from the sample education newsletter:
 
 CONTEXT:
 {context}
